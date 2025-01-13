@@ -1,0 +1,56 @@
+@model List<Post>
+    <partial name="../Shared/Common/_PageHeader.cshtml" model='("your all blogs","Dashboard","/","Blogs list") '></partial>
+<div class="card">
+    <div class="card-body">
+        <div class="d-flex justify-content-between">
+            <h2>You all blogs</h2>
+            <div class="alert alert-success " role="alert">
+                @TempData["success"]
+            </div>
+            <div>
+                <a asp-action="Create" asp-controller="Post" class="btn btn-primary">Add new psot</a>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table mb-0 table-striped text-center">
+                <thead>
+                    <tr>
+
+                        <th>Media</th>
+                        <th>Tilte</th>
+                        <th>Published</th>
+                        <th>Status</th>
+                        <th>Action</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.Any())
+                    {
+                        @foreach (var post in Model)
+                        {
+
+                            <tr>
+
+                                <td>
+                                    <img src="@post.Media" alt="@post.Title" asp-append-version="true" width="100px">
+                                </td>
+                                <td> @post.Title</td>
+                                <td> @post.PublishedAt</td>
+                                <td> @post.Status</td>
+                                <td>
+                                    <a href="" class="btn btn-primary m-2">Edit<a href=" " class="btn btn-success m-2">View<a
+                                                href="" class="btn btn-danger ">Delete</a> </a> </a>
+                                </td>
+
+                            </tr>
+                        }
+                    }
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
