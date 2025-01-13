@@ -33,3 +33,4 @@ F:\Project\Blogger\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.d
 F:\Project\Blogger\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll
 F:\Project\Blogger\obj\Debug\net8.0\Blogger.csproj.AssemblyReference.cache
 F:\Project\Blogger\obj\Debug\net8.0\Blogger.csproj.Up2Date
+F:\Project\Blogger\obj\Debug\net8.0\Blogger.sourcelink.json

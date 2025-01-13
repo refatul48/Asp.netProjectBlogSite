@@ -1,0 +1,55 @@
+@{
+    ViewData["Title"] = "Edit Post";
+}
+
+
+@* <partial name="../Shared/Common/_PageHeader.cshtml" model='("Add new blogs", "Blogs", "/Post/List","Add new Blogs") '></partial> *@
+@model Post
+
+
+<div class="card">
+    <div class="card-body">
+
+        <h4 class="card-title">Basic Information</h4>
+        <p class="card-title-desc"></p>
+        <form asp-action="Create">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="mb-3">
+                        <label asp-for="Title"></label>
+                        <input asp-for="Title" type="text" class="form-control" required >
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="mb-3">
+                        <label asp-for="Content"></label>
+                        <textarea asp-for="Content" type="text" class="form-control" placeholder="Enter your Content" required ></textarea>
+                        
+                    </div>
+                </div>
+        
+                </div>
+                <div class="col-sm-12">
+                    <div class="mb-3">
+                        <label asp-for="Slug"></label>
+                        <input asp-for="Slug" type="text" class="form-control"  required>
+                        
+                        
+                    </div>
+                </div>
+
+                <div class="col-sm-12">
+                    <div class="mb-3">
+                        <label class="control-label" asp-for="Status"></label>
+                        <select class="form-control "   asp-for="Status" asp-items="Html.GetEnumSelectList<Status>()" required> </select>
+                       
+                </div>
+            <div class="d-flex flex-wrap gap-2">
+                <button type="submit" class="btn btn-primary waves-effect waves-light">Save Changes</button>
+               
+            </div>
+        </div>
+        </form>
+
+    </div>
+</div>
